@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Ofertas Super Guajardo</title>
+    <meta charset="utf-8">
+    <link rel="shortcut icon" href="favicon.png" >
+  </head>
+  <body>
+
+    <style type="text/css">
+      body {
+        background-color: #333;
+        margin: 0;
+        padding: 0;
+      }
+      .container {
+        height: 100vh;
+        width: 90%;
+        margin: 20px auto;
+        //box-shadow: 0 0 5px red;
+      }
+      .fullscreen {
+        background-color: #333;
+      }
+    </style>
+
+    <div class="container" id="container1">
+
+    </div>
+
+    <script src="js/jquery.min.js"></script>
+    <script src="js/html2canvas.min.js"></script>
+    <script src="js/three.min.js"></script>
+    <script src="js/pdf.min.js"></script>
+    <script src="js/3dflipbook.min.js"></script>
+
+    <script type="text/javascript">
+
+      var template = {
+        html: 'templates/default-book-view.html',
+        links: [{
+          rel: 'stylesheet',
+          href: 'css/font-awesome.min.css'
+        }],
+        styles: [
+          'css/short-black-book-view.css'
+        ],
+        script: 'js/default-book-view.js'
+      };
+
+      // Book 1 {
+      $('#container1').FlipBook({
+        pdf: 'books/pdf/Guajardo.pdf',
+        pages: 2,
+        template: template
+      });
+      // }
+
+      // Book 2 {
+      //$('#container2').FlipBook({
+       // pdf: 'books/pdf/CondoLiving.pdf',
+        //template: template
+      //});
+      // }
+
+    </script>
+
+  </body>
+</html>
